@@ -1,0 +1,63 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "HEMS",
+        "description": "Configure your EcoTracker connection.",
+        "data": {
+          "host": "Host",
+          "port": "Port"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Failed to connect to EcoTracker.",
+      "invalid_response": "Invalid response received from EcoTracker.",
+      "unknown": "Unexpected error."
+    },
+    "abort": {
+      "already_configured": "This EcoTracker is already configured."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Device control",
+        "description": "Enable each Zendure device HEMS is allowed to actively control (setting charge/discharge limits). Devices left unchecked are still detected and monitored, but never commanded."
+      }
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "grid_stable": {
+        "name": "Grid Stable",
+        "state": {
+          "on": "Stable",
+          "off": "Fluctuating"
+        }
+      }
+    },
+    "sensor": {
+      "grid_power": {
+        "name": "Grid Power"
+      },
+      "grid_import": {
+        "name": "Grid Import"
+      },
+      "grid_export": {
+        "name": "Grid Export"
+      },
+      "grid_trend": {
+        "name": "Grid Trend"
+      },
+      "grid_direction": {
+        "name": "Grid Direction",
+        "state": {
+          "import": "Import",
+          "export": "Export",
+          "idle": "Idle"
+        }
+      }
+    }
+  }
+}

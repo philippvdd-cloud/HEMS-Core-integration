@@ -1,0 +1,63 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "HEMS",
+        "description": "Konfiguriere deine EcoTracker-Verbindung.",
+        "data": {
+          "host": "Host",
+          "port": "Port"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Verbindung zum EcoTracker fehlgeschlagen.",
+      "invalid_response": "Ungültige Antwort vom EcoTracker erhalten.",
+      "unknown": "Unerwarteter Fehler."
+    },
+    "abort": {
+      "already_configured": "Dieser EcoTracker ist bereits konfiguriert."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Gerätesteuerung",
+        "description": "Aktiviere jedes Zendure-Gerät, das HEMS aktiv steuern darf (Lade-/Entladelimits setzen). Nicht aktivierte Geräte werden weiterhin erkannt und beobachtet, aber niemals angesteuert."
+      }
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "grid_stable": {
+        "name": "Netz stabil",
+        "state": {
+          "on": "Stabil",
+          "off": "Schwankend"
+        }
+      }
+    },
+    "sensor": {
+      "grid_power": {
+        "name": "Netzleistung"
+      },
+      "grid_import": {
+        "name": "Netzbezug"
+      },
+      "grid_export": {
+        "name": "Netzeinspeisung"
+      },
+      "grid_trend": {
+        "name": "Netztrend"
+      },
+      "grid_direction": {
+        "name": "Netzrichtung",
+        "state": {
+          "import": "Bezug",
+          "export": "Einspeisung",
+          "idle": "Ruhend"
+        }
+      }
+    }
+  }
+}
